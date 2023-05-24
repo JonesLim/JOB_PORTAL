@@ -5,7 +5,12 @@ require("dotenv").config();
 const cors = require("cors");
 
 const { DB_HOST, DB_PORT, DB_NAME } = process.env;
-mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`);
+// mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`);
+
+//online db connection
+mongoose.connect(
+  "mongodb://mongo:kc4oMsGVj7MSbGewohmX@containers-us-west-185.railway.app:6121"
+);
 
 app.use(cors());
 app.use(express.json());
